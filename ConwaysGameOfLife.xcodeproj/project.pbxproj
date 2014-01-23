@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D23D658F18919B3F0078BF9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D658E18919B3F0078BF9E /* Foundation.framework */; };
+		D23D659118919B3F0078BF9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659018919B3F0078BF9E /* CoreGraphics.framework */; };
+		D23D659318919B3F0078BF9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659218919B3F0078BF9E /* UIKit.framework */; };
+		D23D659918919B3F0078BF9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D23D659718919B3F0078BF9E /* InfoPlist.strings */; };
+		D23D659B18919B3F0078BF9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D659A18919B3F0078BF9E /* main.m */; };
+		D23D659F18919B3F0078BF9E /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D659E18919B3F0078BF9E /* SSAppDelegate.m */; };
+		D23D65A218919B3F0078BF9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23D65A018919B3F0078BF9E /* Main.storyboard */; };
+		D23D65A518919B3F0078BF9E /* SSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65A418919B3F0078BF9E /* SSViewController.m */; };
+		D23D65A718919B3F0078BF9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23D65A618919B3F0078BF9E /* Images.xcassets */; };
+		D23D65AE18919B3F0078BF9E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D65AD18919B3F0078BF9E /* XCTest.framework */; };
+		D23D65AF18919B3F0078BF9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D658E18919B3F0078BF9E /* Foundation.framework */; };
+		D23D65B018919B3F0078BF9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659218919B3F0078BF9E /* UIKit.framework */; };
+		D23D65B818919B3F0078BF9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D23D65B618919B3F0078BF9E /* InfoPlist.strings */; };
+		D23D65BA18919B3F0078BF9E /* ConwaysGameOfLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65B918919B3F0078BF9E /* ConwaysGameOfLifeTests.m */; };
+		D23D65C518919C8B0078BF9E /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */; };
+		D23D65C818919D3A0078BF9E /* SSGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65C718919D3A0078BF9E /* SSGridView.m */; };
+		D23D65CB18919E0C0078BF9E /* SSBoxButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65CA18919E0C0078BF9E /* SSBoxButton.m */; };
+		D23D65CF1891A84F0078BF9E /* SSGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65CE1891A84F0078BF9E /* SSGameState.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D23D65B118919B3F0078BF9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23D658318919B3F0078BF9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D23D658A18919B3F0078BF9E;
+			remoteInfo = ConwaysGameOfLife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D23D658B18919B3F0078BF9E /* ConwaysGameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConwaysGameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23D658E18919B3F0078BF9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D23D659018919B3F0078BF9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D23D659218919B3F0078BF9E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D23D659618919B3F0078BF9E /* ConwaysGameOfLife-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConwaysGameOfLife-Info.plist"; sourceTree = "<group>"; };
+		D23D659818919B3F0078BF9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D23D659A18919B3F0078BF9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D23D659C18919B3F0078BF9E /* ConwaysGameOfLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConwaysGameOfLife-Prefix.pch"; sourceTree = "<group>"; };
+		D23D659D18919B3F0078BF9E /* SSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAppDelegate.h; sourceTree = "<group>"; };
+		D23D659E18919B3F0078BF9E /* SSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
+		D23D65A118919B3F0078BF9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D23D65A318919B3F0078BF9E /* SSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSViewController.h; sourceTree = "<group>"; };
+		D23D65A418919B3F0078BF9E /* SSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSViewController.m; sourceTree = "<group>"; };
+		D23D65A618919B3F0078BF9E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D23D65AC18919B3F0078BF9E /* ConwaysGameOfLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConwaysGameOfLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23D65AD18919B3F0078BF9E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D23D65B518919B3F0078BF9E /* ConwaysGameOfLifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConwaysGameOfLifeTests-Info.plist"; sourceTree = "<group>"; };
+		D23D65B718919B3F0078BF9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D23D65B918919B3F0078BF9E /* ConwaysGameOfLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConwaysGameOfLifeTests.m; sourceTree = "<group>"; };
+		D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		D23D65C618919D3A0078BF9E /* SSGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGridView.h; sourceTree = "<group>"; };
+		D23D65C718919D3A0078BF9E /* SSGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSGridView.m; sourceTree = "<group>"; };
+		D23D65C918919E0C0078BF9E /* SSBoxButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBoxButton.h; sourceTree = "<group>"; };
+		D23D65CA18919E0C0078BF9E /* SSBoxButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBoxButton.m; sourceTree = "<group>"; };
+		D23D65CC18919F5B0078BF9E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D23D65CD1891A84F0078BF9E /* SSGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGameState.h; sourceTree = "<group>"; };
+		D23D65CE1891A84F0078BF9E /* SSGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSGameState.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D23D658818919B3F0078BF9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D659118919B3F0078BF9E /* CoreGraphics.framework in Frameworks */,
+				D23D659318919B3F0078BF9E /* UIKit.framework in Frameworks */,
+				D23D658F18919B3F0078BF9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23D65A918919B3F0078BF9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D65AE18919B3F0078BF9E /* XCTest.framework in Frameworks */,
+				D23D65B018919B3F0078BF9E /* UIKit.framework in Frameworks */,
+				D23D65AF18919B3F0078BF9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D23D658218919B3F0078BF9E = {
+			isa = PBXGroup;
+			children = (
+				D23D659418919B3F0078BF9E /* ConwaysGameOfLife */,
+				D23D65B318919B3F0078BF9E /* ConwaysGameOfLifeTests */,
+				D23D658D18919B3F0078BF9E /* Frameworks */,
+				D23D658C18919B3F0078BF9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D23D658C18919B3F0078BF9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D23D658B18919B3F0078BF9E /* ConwaysGameOfLife.app */,
+				D23D65AC18919B3F0078BF9E /* ConwaysGameOfLifeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D23D658D18919B3F0078BF9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D23D658E18919B3F0078BF9E /* Foundation.framework */,
+				D23D659018919B3F0078BF9E /* CoreGraphics.framework */,
+				D23D659218919B3F0078BF9E /* UIKit.framework */,
+				D23D65AD18919B3F0078BF9E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D23D659418919B3F0078BF9E /* ConwaysGameOfLife */ = {
+			isa = PBXGroup;
+			children = (
+				D23D65C318919C620078BF9E /* iPad */,
+				D23D659D18919B3F0078BF9E /* SSAppDelegate.h */,
+				D23D659E18919B3F0078BF9E /* SSAppDelegate.m */,
+				D23D65A018919B3F0078BF9E /* Main.storyboard */,
+				D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */,
+				D23D65C618919D3A0078BF9E /* SSGridView.h */,
+				D23D65C718919D3A0078BF9E /* SSGridView.m */,
+				D23D65CC18919F5B0078BF9E /* Constants.h */,
+				D23D65C918919E0C0078BF9E /* SSBoxButton.h */,
+				D23D65CA18919E0C0078BF9E /* SSBoxButton.m */,
+				D23D65A318919B3F0078BF9E /* SSViewController.h */,
+				D23D65A418919B3F0078BF9E /* SSViewController.m */,
+				D23D65CD1891A84F0078BF9E /* SSGameState.h */,
+				D23D65CE1891A84F0078BF9E /* SSGameState.m */,
+				D23D65A618919B3F0078BF9E /* Images.xcassets */,
+				D23D659518919B3F0078BF9E /* Supporting Files */,
+			);
+			path = ConwaysGameOfLife;
+			sourceTree = "<group>";
+		};
+		D23D659518919B3F0078BF9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D23D659618919B3F0078BF9E /* ConwaysGameOfLife-Info.plist */,
+				D23D659718919B3F0078BF9E /* InfoPlist.strings */,
+				D23D659A18919B3F0078BF9E /* main.m */,
+				D23D659C18919B3F0078BF9E /* ConwaysGameOfLife-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D23D65B318919B3F0078BF9E /* ConwaysGameOfLifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D23D65B918919B3F0078BF9E /* ConwaysGameOfLifeTests.m */,
+				D23D65B418919B3F0078BF9E /* Supporting Files */,
+			);
+			path = ConwaysGameOfLifeTests;
+			sourceTree = "<group>";
+		};
+		D23D65B418919B3F0078BF9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D23D65B518919B3F0078BF9E /* ConwaysGameOfLifeTests-Info.plist */,
+				D23D65B618919B3F0078BF9E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D23D65C318919C620078BF9E /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D23D658A18919B3F0078BF9E /* ConwaysGameOfLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23D65BD18919B3F0078BF9E /* Build configuration list for PBXNativeTarget "ConwaysGameOfLife" */;
+			buildPhases = (
+				D23D658718919B3F0078BF9E /* Sources */,
+				D23D658818919B3F0078BF9E /* Frameworks */,
+				D23D658918919B3F0078BF9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConwaysGameOfLife;
+			productName = ConwaysGameOfLife;
+			productReference = D23D658B18919B3F0078BF9E /* ConwaysGameOfLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D23D65AB18919B3F0078BF9E /* ConwaysGameOfLifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23D65C018919B3F0078BF9E /* Build configuration list for PBXNativeTarget "ConwaysGameOfLifeTests" */;
+			buildPhases = (
+				D23D65A818919B3F0078BF9E /* Sources */,
+				D23D65A918919B3F0078BF9E /* Frameworks */,
+				D23D65AA18919B3F0078BF9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D23D65B218919B3F0078BF9E /* PBXTargetDependency */,
+			);
+			name = ConwaysGameOfLifeTests;
+			productName = ConwaysGameOfLifeTests;
+			productReference = D23D65AC18919B3F0078BF9E /* ConwaysGameOfLifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D23D658318919B3F0078BF9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Steven Stevenson";
+				TargetAttributes = {
+					D23D658A18919B3F0078BF9E = {
+						DevelopmentTeam = 2S283D3328;
+					};
+					D23D65AB18919B3F0078BF9E = {
+						TestTargetID = D23D658A18919B3F0078BF9E;
+					};
+				};
+			};
+			buildConfigurationList = D23D658618919B3F0078BF9E /* Build configuration list for PBXProject "ConwaysGameOfLife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D23D658218919B3F0078BF9E;
+			productRefGroup = D23D658C18919B3F0078BF9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D23D658A18919B3F0078BF9E /* ConwaysGameOfLife */,
+				D23D65AB18919B3F0078BF9E /* ConwaysGameOfLifeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D23D658918919B3F0078BF9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D65A718919B3F0078BF9E /* Images.xcassets in Resources */,
+				D23D659918919B3F0078BF9E /* InfoPlist.strings in Resources */,
+				D23D65A218919B3F0078BF9E /* Main.storyboard in Resources */,
+				D23D65C518919C8B0078BF9E /* iPadStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23D65AA18919B3F0078BF9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D65B818919B3F0078BF9E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D23D658718919B3F0078BF9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D65A518919B3F0078BF9E /* SSViewController.m in Sources */,
+				D23D65CF1891A84F0078BF9E /* SSGameState.m in Sources */,
+				D23D659F18919B3F0078BF9E /* SSAppDelegate.m in Sources */,
+				D23D65CB18919E0C0078BF9E /* SSBoxButton.m in Sources */,
+				D23D65C818919D3A0078BF9E /* SSGridView.m in Sources */,
+				D23D659B18919B3F0078BF9E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D23D65A818919B3F0078BF9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23D65BA18919B3F0078BF9E /* ConwaysGameOfLifeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D23D65B218919B3F0078BF9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D23D658A18919B3F0078BF9E /* ConwaysGameOfLife */;
+			targetProxy = D23D65B118919B3F0078BF9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D23D659718919B3F0078BF9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D23D659818919B3F0078BF9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D23D65A018919B3F0078BF9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D23D65A118919B3F0078BF9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D23D65B618919B3F0078BF9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D23D65B718919B3F0078BF9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D23D65BB18919B3F0078BF9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D23D65BC18919B3F0078BF9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D23D65BE18919B3F0078BF9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConwaysGameOfLife/ConwaysGameOfLife-Prefix.pch";
+				INFOPLIST_FILE = "ConwaysGameOfLife/ConwaysGameOfLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D23D65BF18919B3F0078BF9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConwaysGameOfLife/ConwaysGameOfLife-Prefix.pch";
+				INFOPLIST_FILE = "ConwaysGameOfLife/ConwaysGameOfLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D23D65C118919B3F0078BF9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConwaysGameOfLife.app/ConwaysGameOfLife";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConwaysGameOfLife/ConwaysGameOfLife-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ConwaysGameOfLifeTests/ConwaysGameOfLifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D23D65C218919B3F0078BF9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConwaysGameOfLife.app/ConwaysGameOfLife";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConwaysGameOfLife/ConwaysGameOfLife-Prefix.pch";
+				INFOPLIST_FILE = "ConwaysGameOfLifeTests/ConwaysGameOfLifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D23D658618919B3F0078BF9E /* Build configuration list for PBXProject "ConwaysGameOfLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23D65BB18919B3F0078BF9E /* Debug */,
+				D23D65BC18919B3F0078BF9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D23D65BD18919B3F0078BF9E /* Build configuration list for PBXNativeTarget "ConwaysGameOfLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23D65BE18919B3F0078BF9E /* Debug */,
+				D23D65BF18919B3F0078BF9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D23D65C018919B3F0078BF9E /* Build configuration list for PBXNativeTarget "ConwaysGameOfLifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23D65C118919B3F0078BF9E /* Debug */,
+				D23D65C218919B3F0078BF9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D23D658318919B3F0078BF9E /* Project object */;
+}
