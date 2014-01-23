@@ -22,5 +22,6 @@
 
 -(void) startGameLoop;
 -(void) stopGameLoop;
+-(void) resetGrid;
 
 @end

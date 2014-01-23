@@ -34,6 +34,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)resetGrid:(id)sender {
+    [self.theGame resetGrid];
+}
+
 - (IBAction)switchDamnit:(id)sender {
     self.isPlaying = [(UISwitch*)sender isOn];
     if (self.isPlaying) {

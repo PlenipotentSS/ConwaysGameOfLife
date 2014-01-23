@@ -25,22 +25,20 @@
 
 -(void) boxSelected {
     if (self.isAlive) {
-        [self setDead];
+        [self setIsAlive:NO];
     } else {
-        [self setAlive];
+        [self setIsAlive:YES];
     }
 }
 
--(void) setDead {
-    self.isAlive = NO;
-    self.backgroundColor = [UIColor whiteColor];
-    NSLog(@"Row: %i Column: %i",self.rowIndex,self.columnIndex);
-}
-
--(void) setAlive {
-    self.isAlive = YES;
-    self.backgroundColor = [UIColor blackColor];
-    NSLog(@"Row: %i Column: %i",self.rowIndex,self.columnIndex);
+- (void)setIsAlive:(BOOL)isAlive
+{
+    _isAlive = isAlive;
+    if (isAlive) {
+        self.backgroundColor = [UIColor blackColor];
+    } else {
+        self.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 @end
