@@ -91,6 +91,7 @@
         for (NSArray *row in self.state) {
             for (SSBoxButton *box in row) {
                 [box setIsAlive:NO];
+                [box resetFrequency];
             }
         }
     }
