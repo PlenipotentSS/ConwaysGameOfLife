@@ -17,17 +17,33 @@
 
 @implementation SSGameState
 
+-(id) init {
+    self = [super init];
+    if (self) {
+        _redrawTimer = .1;
+    }
+    return self;
+}
 
 #pragma mark - Start Game Loop Methods
 -(void) startGameLoop {
     [self.delegate setGridState:NO];
     
     self.background = [[NSOperationQueue alloc] init];
-    self.runTimer = [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(runStateChange) userInfo:nil repeats:YES];
+    self.runTimer = [NSTimer scheduledTimerWithTimeInterval:self.redrawTimer target:self selector:@selector(runStateChange) userInfo:nil repeats:YES];
     [self.runTimer fire];
 }
 
+-(void) setRedrawTimer:(CGFloat)redrawTimer {
+    _redrawTimer = redrawTimer;
+    if (self.runTimer) {
+        [self.runTimer invalidate];
+        self.runTimer = [NSTimer scheduledTimerWithTimeInterval:self.redrawTimer target:self selector:@selector(runStateChange) userInfo:nil repeats:YES];
+    }
+}
+
 -(void) runStateChange {
+    NSLog(@"%f",self.redrawTimer);
     NSMutableArray *changesNeeded = [[NSMutableArray alloc] init];
     for (NSArray *row in self.state) {
         for (SSBoxButton *box in row) {
@@ -80,6 +96,7 @@
     [self.delegate setGridState:YES];
     [self.runTimer invalidate];
     self.runTimer = nil;
+    [self.background cancelAllOperations];
 }
 
 

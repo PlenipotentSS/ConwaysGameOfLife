@@ -11,13 +11,12 @@
 @protocol SSGameStateDelegate <NSObject>
 
 -(void) setGridState: (BOOL) interaction;
-
 @end
 
 @interface SSGameState : NSObject
 
 @property (unsafe_unretained) id<SSGameStateDelegate> delegate;
-
+@property (nonatomic) CGFloat redrawTimer;
 @property (nonatomic) NSArray *state;
 
 -(void) startGameLoop;

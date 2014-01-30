@@ -11,9 +11,10 @@
 #import "SSGameState.h"
 
 @interface SSViewController () <SSGameStateDelegate>
-@property (nonatomic) IBOutlet SSGridView *theGrid;
+@property (weak,nonatomic) IBOutlet SSGridView *theGrid;
 @property (nonatomic) BOOL isPlaying;
 @property (nonatomic) SSGameState *theGame;
+@property (weak,nonatomic) IBOutlet UISlider *speedSlider;
 
 @end
 
@@ -25,7 +26,15 @@
     self.theGame = [SSGameState new];
     self.theGame.delegate = self;
     self.theGame.state = [self.theGrid makeGrid];
+    
+    [self.speedSlider addTarget:self action:@selector(updateSpeed) forControlEvents:UIControlEventValueChanged];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void) updateSpeed {
+    NSLog(@"hello");
+    CGFloat newTimerSpeed = INITIAL_SPEED/self.speedSlider.value;
+    [self.theGame setRedrawTimer:newTimerSpeed];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +49,7 @@
 
 - (IBAction)switchDamnit:(id)sender {
     self.isPlaying = [(UISwitch*)sender isOn];
+    NSLog(@"%i",self.isPlaying);
     if (self.isPlaying) {
         [self.theGame startGameLoop];
     } else {
