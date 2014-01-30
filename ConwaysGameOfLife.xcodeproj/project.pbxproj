@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20C5F61189A0F2000E67D42 /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D659E18919B3F0078BF9E /* SSAppDelegate.m */; };
+		D20C5F63189A0FB900E67D42 /* PracticeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D20C5F62189A0FB900E67D42 /* PracticeTest.m */; };
 		D23D658F18919B3F0078BF9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D658E18919B3F0078BF9E /* Foundation.framework */; };
 		D23D659118919B3F0078BF9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659018919B3F0078BF9E /* CoreGraphics.framework */; };
 		D23D659318919B3F0078BF9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659218919B3F0078BF9E /* UIKit.framework */; };
@@ -19,7 +21,6 @@
 		D23D65AF18919B3F0078BF9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D658E18919B3F0078BF9E /* Foundation.framework */; };
 		D23D65B018919B3F0078BF9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659218919B3F0078BF9E /* UIKit.framework */; };
 		D23D65B818919B3F0078BF9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D23D65B618919B3F0078BF9E /* InfoPlist.strings */; };
-		D23D65BA18919B3F0078BF9E /* ConwaysGameOfLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65B918919B3F0078BF9E /* ConwaysGameOfLifeTests.m */; };
 		D23D65C518919C8B0078BF9E /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */; };
 		D23D65C818919D3A0078BF9E /* SSGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65C718919D3A0078BF9E /* SSGridView.m */; };
 		D23D65CB18919E0C0078BF9E /* SSBoxButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65CA18919E0C0078BF9E /* SSBoxButton.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20C5F62189A0FB900E67D42 /* PracticeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeTest.m; sourceTree = "<group>"; };
 		D23D658B18919B3F0078BF9E /* ConwaysGameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConwaysGameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23D658E18919B3F0078BF9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D23D659018919B3F0078BF9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +56,6 @@
 		D23D65AD18919B3F0078BF9E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D23D65B518919B3F0078BF9E /* ConwaysGameOfLifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConwaysGameOfLifeTests-Info.plist"; sourceTree = "<group>"; };
 		D23D65B718919B3F0078BF9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D23D65B918919B3F0078BF9E /* ConwaysGameOfLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConwaysGameOfLifeTests.m; sourceTree = "<group>"; };
 		D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		D23D65C618919D3A0078BF9E /* SSGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGridView.h; sourceTree = "<group>"; };
 		D23D65C718919D3A0078BF9E /* SSGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSGridView.m; sourceTree = "<group>"; };
@@ -171,7 +172,7 @@
 		D23D65B318919B3F0078BF9E /* ConwaysGameOfLifeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D23D65B918919B3F0078BF9E /* ConwaysGameOfLifeTests.m */,
+				D20C5F62189A0FB900E67D42 /* PracticeTest.m */,
 				D23D65B418919B3F0078BF9E /* Supporting Files */,
 			);
 			path = ConwaysGameOfLifeTests;
@@ -307,7 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23D65BA18919B3F0078BF9E /* ConwaysGameOfLifeTests.m in Sources */,
+				D20C5F63189A0FB900E67D42 /* PracticeTest.m in Sources */,
+				D20C5F61189A0F2000E67D42 /* SSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
