@@ -42,9 +42,7 @@
     }
 }
 
--(void) runStateChange {
-    NSLog(@"%f",self.redrawTimer);
-    NSMutableArray *changesNeeded = [[NSMutableArray alloc] init];
+-(void) runStateChange {    NSMutableArray *changesNeeded = [[NSMutableArray alloc] init];
     for (NSArray *row in self.state) {
         for (SSBoxButton *box in row) {
             //NSLog(@"rowIndex: %i ColumnIndex: %i",box.rowIndex,box.columnIndex);
