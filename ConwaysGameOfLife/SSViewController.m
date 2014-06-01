@@ -25,14 +25,18 @@
     [super viewDidLoad];
     self.theGame = [SSGameState new];
     self.theGame.delegate = self;
-    self.theGame.state = [self.theGrid makeGrid];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        NSLog(@"using iPad");
+        self.theGame.state = [self.theGrid makeGrid];
+    } else {
+        self.theGame.state = [self.theGrid makeiPhoneGrid];
+    }
     
     [self.speedSlider addTarget:self action:@selector(updateSpeed) forControlEvents:UIControlEventValueChanged];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 -(void) updateSpeed {
-    NSLog(@"hello");
     CGFloat newTimerSpeed = INITIAL_SPEED/self.speedSlider.value;
     [self.theGame setRedrawTimer:newTimerSpeed];
 }
@@ -40,16 +44,21 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be recreated .
+}
+
+- (void) changeImage
+{
+    self.theGame.state = [self.theGrid makeGrid];
 }
 
 - (IBAction)resetGrid:(id)sender {
     [self.theGame resetGrid];
+    [self changeImage];
 }
 
-- (IBAction)switchDamnit:(id)sender {
+- (IBAction)startRunning:(id)sender {
     self.isPlaying = [(UISwitch*)sender isOn];
-    NSLog(@"%i",self.isPlaying);
     if (self.isPlaying) {
         [self.theGame startGameLoop];
     } else {

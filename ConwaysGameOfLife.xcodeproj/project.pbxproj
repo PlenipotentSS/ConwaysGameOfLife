@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D20C5F61189A0F2000E67D42 /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D659E18919B3F0078BF9E /* SSAppDelegate.m */; };
 		D20C5F63189A0FB900E67D42 /* PracticeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D20C5F62189A0FB900E67D42 /* PracticeTest.m */; };
+		D2141529193B07080026666C /* UIImage+TileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D2141528193B07080026666C /* UIImage+TileImage.m */; };
+		D2141531193B0D2F0026666C /* paris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2141530193B0D2F0026666C /* paris.jpg */; };
+		D2141533193B0EDB0026666C /* seattle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2141532193B0EDB0026666C /* seattle.jpg */; };
+		D2141535193B0F100026666C /* sydney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2141534193B0F100026666C /* sydney.jpg */; };
 		D23D658F18919B3F0078BF9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D658E18919B3F0078BF9E /* Foundation.framework */; };
 		D23D659118919B3F0078BF9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659018919B3F0078BF9E /* CoreGraphics.framework */; };
 		D23D659318919B3F0078BF9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D659218919B3F0078BF9E /* UIKit.framework */; };
@@ -25,6 +29,7 @@
 		D23D65C818919D3A0078BF9E /* SSGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65C718919D3A0078BF9E /* SSGridView.m */; };
 		D23D65CB18919E0C0078BF9E /* SSBoxButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65CA18919E0C0078BF9E /* SSBoxButton.m */; };
 		D23D65CF1891A84F0078BF9E /* SSGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = D23D65CE1891A84F0078BF9E /* SSGameState.m */; };
+		D2F86627193A957E00D12D05 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86626193A957E00D12D05 /* iPhoneStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,11 @@
 
 /* Begin PBXFileReference section */
 		D20C5F62189A0FB900E67D42 /* PracticeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeTest.m; sourceTree = "<group>"; };
+		D2141527193B07080026666C /* UIImage+TileImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TileImage.h"; sourceTree = "<group>"; };
+		D2141528193B07080026666C /* UIImage+TileImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TileImage.m"; sourceTree = "<group>"; };
+		D2141530193B0D2F0026666C /* paris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paris.jpg; sourceTree = "<group>"; };
+		D2141532193B0EDB0026666C /* seattle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seattle.jpg; sourceTree = "<group>"; };
+		D2141534193B0F100026666C /* sydney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sydney.jpg; sourceTree = "<group>"; };
 		D23D658B18919B3F0078BF9E /* ConwaysGameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConwaysGameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23D658E18919B3F0078BF9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D23D659018919B3F0078BF9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,6 +74,7 @@
 		D23D65CC18919F5B0078BF9E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D23D65CD1891A84F0078BF9E /* SSGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGameState.h; sourceTree = "<group>"; };
 		D23D65CE1891A84F0078BF9E /* SSGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSGameState.m; sourceTree = "<group>"; };
+		D2F86626193A957E00D12D05 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,14 +156,16 @@
 		D23D659418919B3F0078BF9E /* ConwaysGameOfLife */ = {
 			isa = PBXGroup;
 			children = (
-				D23D65C318919C620078BF9E /* iPad */,
+				D23D65C318919C620078BF9E /* Storyboard */,
 				D23D659D18919B3F0078BF9E /* SSAppDelegate.h */,
 				D23D659E18919B3F0078BF9E /* SSAppDelegate.m */,
-				D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */,
 				D23D65CC18919F5B0078BF9E /* Constants.h */,
 				D22B18AB1891BB0D0043D7A0 /* Views */,
 				D22B18AA1891BB060043D7A0 /* Model */,
 				D23D65A618919B3F0078BF9E /* Images.xcassets */,
+				D2141530193B0D2F0026666C /* paris.jpg */,
+				D2141532193B0EDB0026666C /* seattle.jpg */,
+				D2141534193B0F100026666C /* sydney.jpg */,
 				D23D659518919B3F0078BF9E /* Supporting Files */,
 			);
 			path = ConwaysGameOfLife;
@@ -161,6 +174,8 @@
 		D23D659518919B3F0078BF9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2141527193B07080026666C /* UIImage+TileImage.h */,
+				D2141528193B07080026666C /* UIImage+TileImage.m */,
 				D23D659618919B3F0078BF9E /* ConwaysGameOfLife-Info.plist */,
 				D23D659718919B3F0078BF9E /* InfoPlist.strings */,
 				D23D659A18919B3F0078BF9E /* main.m */,
@@ -187,11 +202,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D23D65C318919C620078BF9E /* iPad */ = {
+		D23D65C318919C620078BF9E /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D23D65C418919C8B0078BF9E /* iPadStoryboard.storyboard */,
+				D2F86626193A957E00D12D05 /* iPhoneStoryboard.storyboard */,
 			);
-			name = iPad;
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +256,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SS;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Steven Stevenson";
 				TargetAttributes = {
 					D23D658A18919B3F0078BF9E = {
@@ -276,7 +293,11 @@
 			files = (
 				D23D65A718919B3F0078BF9E /* Images.xcassets in Resources */,
 				D23D659918919B3F0078BF9E /* InfoPlist.strings in Resources */,
+				D2141533193B0EDB0026666C /* seattle.jpg in Resources */,
+				D2141531193B0D2F0026666C /* paris.jpg in Resources */,
+				D2F86627193A957E00D12D05 /* iPhoneStoryboard.storyboard in Resources */,
 				D23D65C518919C8B0078BF9E /* iPadStoryboard.storyboard in Resources */,
+				D2141535193B0F100026666C /* sydney.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23D65A518919B3F0078BF9E /* SSViewController.m in Sources */,
+				D2141529193B07080026666C /* UIImage+TileImage.m in Sources */,
 				D23D65CF1891A84F0078BF9E /* SSGameState.m in Sources */,
 				D23D659F18919B3F0078BF9E /* SSAppDelegate.m in Sources */,
 				D23D65CB18919E0C0078BF9E /* SSBoxButton.m in Sources */,
@@ -347,7 +369,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -386,7 +407,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -428,7 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -446,7 +466,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -454,7 +474,6 @@
 		D23D65C118919B3F0078BF9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConwaysGameOfLife.app/ConwaysGameOfLife";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -477,7 +496,6 @@
 		D23D65C218919B3F0078BF9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConwaysGameOfLife.app/ConwaysGameOfLife";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

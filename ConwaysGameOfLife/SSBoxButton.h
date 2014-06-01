@@ -14,6 +14,7 @@
 @property (nonatomic) NSInteger rowIndex;
 @property (nonatomic) NSInteger columnIndex;
 
--(void) resetFrequency;
+- (void)resetFrequency;
+- (void)increaseFrequencyChange;
 
 @end

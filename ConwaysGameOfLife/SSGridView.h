@@ -11,5 +11,6 @@
 @interface SSGridView : UIView
 
 -(NSArray*) makeGrid;
+-(NSArray*) makeiPhoneGrid;
 
 @end

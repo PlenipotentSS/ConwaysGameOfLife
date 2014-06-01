@@ -20,7 +20,7 @@
 -(id) init {
     self = [super init];
     if (self) {
-        _redrawTimer = .1;
+        _redrawTimer = INITIAL_SPEED;
     }
     return self;
 }
@@ -42,7 +42,8 @@
     }
 }
 
--(void) runStateChange {    NSMutableArray *changesNeeded = [[NSMutableArray alloc] init];
+-(void) runStateChange {
+    NSMutableArray *changesNeeded = [[NSMutableArray alloc] init];
     for (NSArray *row in self.state) {
         for (SSBoxButton *box in row) {
             //NSLog(@"rowIndex: %i ColumnIndex: %i",box.rowIndex,box.columnIndex);
@@ -51,10 +52,17 @@
             if (newAliveState != box.isAlive) {
                 [changesNeeded addObject:box];
             }
+            if (newAliveState == YES) {
+                // change color of box
+                [box increaseFrequencyChange];
+            }
         }
     }
     for (SSBoxButton* box in changesNeeded) {
         [box setIsAlive:!box.isAlive];
+        if (box.isAlive == YES) {
+            [box increaseFrequencyChange];
+        }
     }
     
 }
@@ -75,7 +83,11 @@
     NSInteger aliveBoxes = 0;
     for (int rowIndex = (int)row-1;rowIndex <row+2;rowIndex++ ) {
         for (int columnIndex = (int)column-1;columnIndex <column+2;columnIndex++ ) {
-            if (!(rowIndex < 0 || columnIndex < 0 || rowIndex == TOTAL_BOXES_IN_ROW  || columnIndex == TOTAL_BOXES_IN_ROW)){
+            NSInteger numberOfRows = TOTAL_BOXES_IN_ROW;
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+                numberOfRows = TOTAL_BOXES_IN_COLUMN;
+            }
+            if (!(rowIndex < 0 || columnIndex < 0 || rowIndex ==  numberOfRows || columnIndex == TOTAL_BOXES_IN_COLUMN)){
                 
                 if (!(rowIndex == row && columnIndex == column)) {
                     SSBoxButton *thisBox = [[self.state objectAtIndex:rowIndex] objectAtIndex:columnIndex];
@@ -106,7 +118,6 @@
         for (NSArray *row in self.state) {
             for (SSBoxButton *box in row) {
                 [box setIsAlive:NO];
-                [box resetFrequency];
             }
         }
     }

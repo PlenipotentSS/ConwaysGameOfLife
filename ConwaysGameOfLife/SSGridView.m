@@ -8,7 +8,10 @@
 
 #import "SSGridView.h"
 #import "SSBoxButton.h"
+#import "UIImage+TileImage.h"
 @interface SSGridView()
+
+@property (nonatomic, strong) NSArray *images;
 
 @end
 @implementation SSGridView
@@ -23,25 +26,35 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (UIImage*) getNextImage
 {
-    // Drawing code
+    if (!self.images) {
+        self.images = @[[UIImage imageNamed:@"paris.jpg"],
+                        [UIImage imageNamed:@"seattle.jpg"],
+                        [UIImage imageNamed:@"sydney.jpg"]
+                         ];
+    }
+    
+    NSInteger randomImageIndex = arc4random()%[self.images count];
+    return self.images[randomImageIndex];
 }
-*/
-
 
 -(NSArray*) makeGrid{
     NSMutableArray *state = [[NSMutableArray alloc] init];
     
+    UIImage *originalImage = [self getNextImage];
+    
     CGFloat x = PADSIZE;
     CGFloat y = PADSIZE;
-    for (int i=0; i<TOTAL_BOXES_IN_ROW;i++) {
+    for (int i=0; i<TOTAL_BOXES_IN_COLUMN;i++) {
         NSMutableArray *row = [[NSMutableArray alloc] init];
-        for (int j=0; j<TOTAL_BOXES_IN_ROW;j++) {
-            SSBoxButton *thisButton = [[SSBoxButton alloc] initWithFrame:CGRectMake(x, y, BOX_SIZE, BOX_SIZE)];
+        for (int j=0; j<TOTAL_BOXES_IN_COLUMN;j++) {
+            CGRect boxFrame = CGRectMake(x, y, BOX_SIZE, BOX_SIZE);
+            SSBoxButton *thisButton = [[SSBoxButton alloc] initWithFrame:boxFrame];
+            
+            UIImage *croppedImage = [originalImage cropImageInRect:boxFrame];
+            [thisButton setImage:croppedImage forState:UIControlStateNormal];
+            
             [thisButton setRowIndex:i];
             [thisButton setColumnIndex:j];
             [self addSubview:thisButton];
@@ -54,5 +67,36 @@
     }
     return [NSArray arrayWithArray:state];
 }
+
+-(NSArray*) makeiPhoneGrid{
+    NSMutableArray *state = [[NSMutableArray alloc] init];
+    
+    UIImage *originalImage = [self getNextImage];
+    
+    CGFloat x = SMALL_PADSIZE;
+    CGFloat y = SMALL_PADSIZE;
+    for (int i=0; i<TOTAL_BOXES_IN_ROW;i++) {
+        NSMutableArray *row = [[NSMutableArray alloc] init];
+        for (int j=0; j<TOTAL_BOXES_IN_COLUMN;j++) {
+            CGRect boxFrame = CGRectMake(x, y, BOX_SIZE, BOX_SIZE);
+            
+            SSBoxButton *thisButton = [[SSBoxButton alloc] initWithFrame:boxFrame];
+            
+            UIImage *croppedImage = [originalImage cropImageInRect:boxFrame];
+            [thisButton setImage:croppedImage forState:UIControlStateNormal];
+            
+            [thisButton setRowIndex:i];
+            [thisButton setColumnIndex:j];
+            [self addSubview:thisButton];
+            [row addObject:thisButton];
+            x+=SMALL_BOX_SIZE+SMALL_PADSIZE;
+        }
+        [state addObject:row];
+        y+= SMALL_BOX_SIZE+SMALL_PADSIZE;
+        x= SMALL_PADSIZE;
+    }
+    return [NSArray arrayWithArray:state];
+}
+
 
 @end
